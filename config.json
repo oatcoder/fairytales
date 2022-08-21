@@ -1,0 +1,47 @@
+﻿{
+  "dataStore": {
+    "mongodb": {
+      "fairytales": {
+        "name": "fairytalesdb",
+        "url": "mongodb://localhost",
+        "port": "27017"
+      }
+    }
+  },
+  "nest": {
+    "api": "https://developer-api.nest.com",
+    "accessToken": {
+      "dev": "c.psTlEwJ7LAb17FP72JRGkM8ArAy2mjS8A00wHSqj4Jq8wF3laOIbDKFMTuS5qk2lemCEpnEJrKz1ySAsyIwasRN6EQl6Hjsb6zPr54K0yqqoyQWNtIjD6gwLAmkmAnS2ql8lwLAkjSYDOQcD",
+      "prod": "c.1LI9vwGgSizZvbxxx61Tm8xXrjj4PQQDltiOMIvtJvjH8fsdj95Gfg5OgWsNoaQM4r6qQQhq5Iv5MaMjdN4fQwZEQwwk6YKhza9XG5CmacJXJWvUAqnvWcb2n1Ob8KP4LlMWZQ7WXCGo7Di1"
+    },
+    "localVideosDir": {
+      "win": "C:\\Users\\Public\\Videos",
+      "osx": "/Users/Shared/Videos"
+    }
+  },
+  "twitter": {
+    "url": "api.twitter.com",
+    "version": "1.1",
+    "tokenUrl": "/oauth2/token",
+    "consumerKey": "fq8dD9H5VqSIotIyBxd4rnYY6",
+    "consumerSecret": "tf9dEe51z9VwU0S23bqAVn8zKWSTBl77jEbNRBLmAJgMuvSPXC",
+    "accessToken": "728020068794302464-rFCI7ZEJ6LHpn9g79izRusjRAhoLv7c",
+    "accessTokenSecret": "zZppzaSfXBPrxZtsqBMJdHn0M3pBw8os1PICF8rSJVarc",
+    "grantType": "client_credentials",
+    "handle": "bigeffort",
+    "handleId": 728020068794302464
+  },
+  "firebase": {
+    "apiKey": "AIzaSyDUKcu4wtmBhupDRCB-gQkwThrAIoAKgUM",
+    "authDomain": "fairytales-1372.firebaseapp.com",
+    "databaseURL": "https://fairytales-1372.firebaseio.com",
+    "storageBucket": "fairytales-1372.appspot.com",
+    "messagingSenderId": "204040054649"
+  },
+  "keep": {
+    "auth": {
+      "username": "oatcoder@gmail.com",
+      "password": "Plmzaq1!"
+    }
+  }
+}
