@@ -1,6 +1,5 @@
 import { Router } from 'express'
 import { ShopController, UtilitiesController } from './controllers'
-import { IStats } from './models'
 import { IoService } from '../io'
 
 export class Routing {
@@ -14,19 +13,19 @@ export class Routing {
     this.addShopRoutes()
   }
 
-  private createInfoRoute () {
+  private createInfoRoute (): void {
     this.router.get('/info', (req, res) => {
-      res.json({ name: 'info', description: 'dev api' } as IStats)
+      res.json({ name: 'info', description: 'dev api' })
     })
   }
 
-  private addUtilitiesRoutes () {
+  private addUtilitiesRoutes (): void {
     const controller = new UtilitiesController(new IoService())
 
     this.router.post('/utilities/io/merge', (req, res) => controller.postMergeFiles(req, res))
   }
 
-  private addShopRoutes () {
+  private addShopRoutes (): void {
     const controller = new ShopController()
 
     this.router.get('/shop/stats', controller.getStats)

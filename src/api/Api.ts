@@ -14,7 +14,7 @@ export class Api {
     this.setRouting()
   }
 
-  private setRouting () {
+  private setRouting (): void {
     this.instance.all('/*', (req: Request, res: Response, next: NextFunction) => {
       if (req.method === 'OPTIONS') {
         res.status(200).end()
@@ -22,22 +22,22 @@ export class Api {
         next()
       }
 
-      logger.info('Request', {data: req.header('User-Agent')})
+      logger.info('Request', { data: req.header('User-Agent') })
     })
 
     this.instance.use('/', new Routing().router)
 
     // route not found
-    this.instance.use((req: Request, res: Response, next: NextFunction) => {
+    this.instance.use((req: Request, res: Response) => {
       res.status(404).send('route not found!')
     })
 
-    this.instance.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    this.instance.use((err: Error, req: Request, res: Response) => {
       res.status(400).json(err.message)
     })
   }
 
-  private setMisc () {
+  private setMisc (): void {
     this.instance.set('view options', { layout: false })
     this.instance.use(urlencoded({ extended: true }))
     this.instance.use(json())

@@ -1,10 +1,9 @@
 import { Request, Response } from 'express'
-import { IStats } from '../models'
 
 export class ShopController {
-  public getStats (req: Request, res: Response) {
+  public getStats (req: Request, res: Response): void {
     try {
-      res.json({ name: 'shop', description: 'Shopping' } as IStats)
+      res.json({ name: 'shop', description: 'Shopping' })
     } catch (e) {
       res.json(e)
     }
